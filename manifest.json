@@ -1,0 +1,35 @@
+{
+  "name": "Katal - Toolbox for Catalyst",
+  "short_name": "Katal",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Assortment of tools for University of Cincinnati's Catalyst System",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "http://www.ratemyprofessors.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cshca.uc.edu/psc/ps/EMPLOYEE/HRMS/c/*",
+        "https://catalyst.uc.edu/psp/ps/EMPLOYEE/HRMS/c/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "js": [
+        "vendor/jquery/jquery.min.js",
+        "vendor/underscore/underscore.min.js",
+        "vendor/rmp-api/rmp-api.js",
+        "vendor/mutationsummary/mutation-summary.js",
+        "src/inject/inject.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
