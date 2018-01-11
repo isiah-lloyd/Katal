@@ -1,5 +1,5 @@
 # Katal
-Assortment of tools for University of Cincinnati's Catalyst System. 
+Chrome extension that injects an assortment of tools into University of Cincinnati's Catalyst System.
 
 Includes a modified version of Shafi Dayatar's [_rmp-api_](https://github.com/shafi-dayatar/rmp-api)
 
