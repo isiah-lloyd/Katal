@@ -10,7 +10,7 @@
     "128": "icons/icon128.png"
   },
   "permissions": [
-    "http://www.ratemyprofessors.com/*"
+    "*://www.ratemyprofessors.com/*"
   ],
   "content_scripts": [
     {

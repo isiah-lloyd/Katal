@@ -1,15 +1,9 @@
-chrome.extension.sendMessage({}, function(response) {
-	const readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
-		const observer = new MutationSummary({
-			callback: handleChanges,
-			queries: [{ element: '.PAPAGETITLE' }]
-		  });
-		  styleTweaks();
-	}
-	}, 10);
+const observer = new MutationSummary({
+	callback: handleChanges,
+	queries: [{ element: '.PAPAGETITLE' }]
 });
+styleTweaks();
+
 function handleChanges(summary) {
 	const changes = summary[0];
 	changes.added.forEach(function(changeEl) {
