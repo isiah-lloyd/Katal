@@ -17,7 +17,7 @@ function addRatings(){
 	$('span[id^="MTG_INSTR"]').each(function(index){
 		const prof_this = this;
 		rmp_uc.get($(this).text(), function(resp){
-			if(resp) {
+			if (resp) {
 				const quality = resp.quality;
 				const url = resp.url;
 				var color = "";
@@ -31,6 +31,26 @@ function addRatings(){
 					color = "#e01743";
 				}
 				$(prof_this).append(`<a style="text-decoration: none;" href="${url}" target="_blank" title="Top Tag: ${resp.topTag}"><span class="box" style="background-color: ${color}">${quality}</span></a>`);
+			}
+			else {
+				rmp.get($(prof_this).text(), function(resp) {
+					if (resp) {
+						const quality = resp.quality;
+						const url = resp.url;
+						var color = "";
+						if (parseFloat(quality) >= 3.5) {
+							color = "#b2ce3a";
+						}
+						else if (parseFloat(quality) >= 2.5 && parseFloat(quality) < 3.5) {
+							color = "#f7cc1e";
+						}
+						else {
+							color = "#e01743";
+						}
+						$(prof_this).append(`<a style="text-decoration: none;" href="${url}" target="_blank" title="Top Tag: ${resp.topTag}"><span class="box" style="background-color: ${color}">${quality}</span></a><abbr style="margin-left:5px" title="This professors school did not exactly match UC, this may be because they taught at a different school or it's a wrong match. University: ${resp.university}">?</abbr>`);
+						console.log(resp);
+					}
+				});
 			}
 		});
 	});

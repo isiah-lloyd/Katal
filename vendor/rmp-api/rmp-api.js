@@ -66,7 +66,8 @@
         easiness: "#mainContent > div.right-panel > div.rating-breakdown > div.left-breakdown > div > div:nth-child(2) > div:nth-child(2) > div",
         clarity: "#mainContent > div.right-panel > div.rating-breakdown > div.left-breakdown > div > div:nth-child(2) > div:nth-child(2) > div",
         help: "#mainContent > div.right-panel > div.rating-breakdown > div.left-breakdown > div > div:nth-child(2) > div:nth-child(2) > div",
-        university: "#mainContent > div.right-panel > div.top-info-block > div.result-info > div.result-title > h2 > a",
+        university: "#mainContent > div.right-panel > div.chegg-bg > div.top-info-block > div.result-info > div.result-title > h2 > a",
+        
         // every comment
         comments: "p.commentsParagraph",
         // top tag of a professor
